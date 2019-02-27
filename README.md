@@ -121,8 +121,9 @@ Endpoint : {localhost}/product/{id}<br/>
 
 <small>Also In order to put dummy data for users and categories, run doctrine fixtures.</small><br/>
 <code>php bin/console doctrine:fixtures:load  --purge-with-truncate</code><br/>
+<small><i><b>--purge-with-truncate</b></i> is optional but advised to run it so that no duplication of data takes place.</small>
 
-##TO DO
+## TODO
 <ul>
 <li>Make ModifiedAt flag update on PUT and PATCH request.</li>
 <li>Create ORM relation between Category and Product Entities. OneToMany and ManyToOne respectively.</li>
