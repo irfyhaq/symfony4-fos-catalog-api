@@ -1,21 +1,36 @@
-# symfony4-fos-catalog-api
+# Symfony4 REST API Project for Inventory Management using FOSRESTBundle, Docker, Doctrine and Behat.
+
 
 <small>It is a Symfony4 project for creating basic REST-based APIs using <b>FOSRESTBundle</b>. <b>Behat</b> is used for unit-testing and <b>docker</b> as a container for the database. <b>Doctrine ORM</b> is also used.</small>
 
+<small><b>Behat</b> is used for Unit testing as just like <b>Kahlan</b>, it is also a Behavior-Driven Development framework for PHP. I've kept it seperate of the root as I was experimenting with couple of ways to create this API project simultaneously, hence to avoid the repitition, it is kept as a seperate repo.</small><br/>
+
+<i>The Behat Unit Test Project repository is at: </i>
+<url>https://github.com/irfyhaq/behat-unit-test-symfony</url>
+
 <small>EndPoints for JSON APIs are :</small>
 <small>
+<ul>
+
+<li>
 <i>List All Products </i><br/>
 Method : GET <br/>
 Endpoint : {localhost}/product
+</li>
 
+<li>
 List All Categories <br/>
 Method : GET <br/>
 Endpoint : {localhost}/category
+</li>
 
+<li>
 Get Single Product<br/>
  Method : GET <br/>
  Endpoint : {localhost}/product/2
-
+</li>
+ 
+<li>
 //TODO :: Update ModifiedAt entry on updation of the record<br/>
 Create a new Product<br/>
 Method : POST<br/>
@@ -27,7 +42,9 @@ JSON data:<br/>
 "sku": "A0004", <br/>"price": 1499.99,<br/>
 "quantity": 5<br/>
 }</code>
+</li>
 
+<li>
 Update Product via PUT<br/>
 Method : PUT<br/>
 Endpoint : {localhost}/product/3<br/>
@@ -38,7 +55,9 @@ JSON data:<br/>
 "sku": "A0004", <br/>"price": 1499.99,<br/>
 "quantity": 23<br/>
 }</code><br/>
+</li>
 
+<li>
 Update Product via PATCH<br/>
 Method : PUT<br/>
 Endpoint : {localhost}/product/3<br/>
@@ -46,11 +65,15 @@ JSON data:<br/>
 <code>{
 "quantity": 23
 }</code>
+</li>
 
+<li>
 Delete a Product<br/>
 Method : DELETE<br/>
 Endpoint : {localhost}/product/3<br/>
 </small>
+</li>
+</ul>
 
 <h2><b>INSTALLATION</b></h2>
 <small>Start with downloading all the dependencies of the project by running.</small><br/>
@@ -86,3 +109,15 @@ Endpoint : {localhost}/product/3<br/>
 
 <small>Also In order to put dummy data for users and categories, run doctrine fixtures.</small><br/>
 <code>php bin/console doctrine:fixtures:load  --purge-with-truncate</code><br/>
+
+##TO DO
+<ul>
+<li>Make ModifiedAt flag update on PUT and PATCH request.</li>
+<li>Create ORM relation between Category and Product Entities. OneToMany and ManyToOne respectively.</li>
+<li><b>User Authentication Module</b></li>
+<li>Move to Production Environment</li>
+</ul>
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
