@@ -13,62 +13,74 @@
 <ul>
 
 <li>
-<i>List All Products </i><br/>
+<i><u>List All Products </u></i><br/>
 Method : GET <br/>
-Endpoint : {localhost}/product
+Endpoint : /product
 </li>
 
 <li>
-List All Categories <br/>
+<i><u>List All Categories</u></i><br/>
 Method : GET <br/>
-Endpoint : {localhost}/category
+Endpoint : /category
 </li>
 
 <li>
-Get Single Product<br/>
- Method : GET <br/>
- Endpoint : {localhost}/product/2
+<i><u>Get Single Product</u></i><br/>
+Method : GET <br/>
+Endpoint : /product/{id}
 </li>
  
 <li>
-//TODO :: Update ModifiedAt entry on updation of the record<br/>
-Create a new Product<br/>
+<i><u>Create a new Product</u></i><br/>
 Method : POST<br/>
 Endpoint : {localhost}/product<br/>
 JSON data:<br/>
-<code>{<br/>
-"name": "Fony UHD HDR 55 4k TV",<br/>
-"category": "TVs and Accessories",<br/>
-"sku": "A0004", <br/>"price": 1499.99,<br/>
-"quantity": 5<br/>
-}</code>
+
+```json
+{
+"name": "Fony UHD HDR 55 4k TV",
+"category": "TVs and Accessories",
+"sku": "A0004",
+"price": 1499.99,
+"quantity": 5
+}
+```
+
 </li>
 
 <li>
-Update Product via PUT<br/>
+<i><u>Update Product via PUT</u></i><br/>
 Method : PUT<br/>
 Endpoint : {localhost}/product/3<br/>
 JSON data:<br/>
-<code>{<br/>
-"name": "Fony UHD HDR 55 4k TV",<br/>
-"category": "TVs and Accessories",<br/>
-"sku": "A0004", <br/>"price": 1499.99,<br/>
-"quantity": 23<br/>
-}</code><br/>
-</li>
 
-<li>
-Update Product via PATCH<br/>
-Method : PUT<br/>
-Endpoint : {localhost}/product/3<br/>
-JSON data:<br/>
-<code>{
+```json
+{
+"name": "Fony UHD HDR 55 4k TV",
+"category": "TVs and Accessories",
+"sku": "A0004", 
+"price": 1499.99,
 "quantity": 23
-}</code>
+}
+```
+
 </li>
 
 <li>
-Delete a Product<br/>
+<i><u>Update Product via PATCH</u></i><br/>
+Method : PUT<br/>
+Endpoint : {localhost}/product/3<br/>
+JSON data:<br/>
+
+```json
+{
+"quantity": 23
+}
+```
+</li>
+
+<li>
+<i><u>Delete a Product</u></i><br/>
 Method : DELETE<br/>
 Endpoint : {localhost}/product/3<br/>
 </small>
