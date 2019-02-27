@@ -45,7 +45,7 @@ class Product
 
     /**
      * @Assert\GreaterThan(0)
-     * @ORM\column(type="decimal", precision=12, scale=2)
+     * @ORM\column(type="decimal")
      */
     private $price;
 
@@ -65,6 +65,7 @@ class Product
     public function __construct()
     {
         $this->modifiedAt = new \DateTime('now');
+        $this->createdAt = new \DateTime('now');
     }
 
     /**
@@ -147,7 +148,7 @@ class Product
      */
     public function setPrice($price): Product
     {
-        $this->price = $price;
+        $this->price = $price ;
         return $this;
     }
 
@@ -185,7 +186,7 @@ class Product
      */
     public function setCreatedAt($createdAt): Product
     {
-        $this->createdAt = $createdAt;
+//        $this->createdAt = $createdAt;
 
         return $this;
     }
@@ -205,7 +206,7 @@ class Product
      */
     public function setModifiedAt($modifiedAt): Product
     {
-        $this->modifiedAt = $modifiedAt;
+//        $this->modifiedAt = $modifiedAt;
         return $this;
     }
 }
