@@ -44,8 +44,8 @@ class Product
     private $quantity;
 
     /**
-     * @Assert\GreaterThan(0)
-     * @ORM\column(type="decimal")
+     *
+     * @ORM\column(type="decimal", precision=6, scale=2)
      */
     private $price;
 
@@ -134,21 +134,21 @@ class Product
     }
 
     /**
-     * @return decimal|null
+     * @return float|null
      */
-    public function getPrice(): ?string
+    public function getPrice(): ?float
     {
-        return $this->price;
+        return (float)$this->price;
     }
 
     /**
-     * @param decimal $price
+     * @param float $price
      *
      * @return Product
      */
     public function setPrice($price): Product
     {
-        $this->price = $price ;
+        $this->price = $price;
         return $this;
     }
 

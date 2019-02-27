@@ -131,7 +131,6 @@ class ProductController extends AbstractFOSRestController implements ClassResour
         if (null === $product) {
             throw new NotFoundHttpException();
         }
-
         return $product;
     }
 }

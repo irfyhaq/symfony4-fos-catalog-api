@@ -31,7 +31,7 @@ Endpoint : /product/{id}
 </li>
  
 <li>
-<i><u>Create a new Product</u></i><br/>
+<i><u>Add a new Product</u></i><br/>
 Method : POST<br/>
 Endpoint : {localhost}/product<br/>
 JSON data:<br/>

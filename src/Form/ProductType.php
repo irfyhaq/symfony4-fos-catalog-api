@@ -20,7 +20,9 @@ class ProductType extends AbstractType
             ->add('quantity',
                 NumberType::class
             )
-            ->add('price')
+            ->add('price',
+                NumberType::class
+            )
             ->add('created_at',
                 DateTimeType::class,
                 [
