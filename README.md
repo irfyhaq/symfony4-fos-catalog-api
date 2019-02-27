@@ -51,7 +51,7 @@ JSON data:<br/>
 <li>
 <i><u>Update Product via PUT</u></i><br/>
 Method : PUT<br/>
-Endpoint : {localhost}/product/3<br/>
+Endpoint : {localhost}/product/{id}<br/>
 JSON data:<br/>
 
 ```json
@@ -69,7 +69,7 @@ JSON data:<br/>
 <li>
 <i><u>Update Product via PATCH</u></i><br/>
 Method : PUT<br/>
-Endpoint : {localhost}/product/3<br/>
+Endpoint : {localhost}/product/{id}<br/>
 JSON data:<br/>
 
 ```json
@@ -82,7 +82,7 @@ JSON data:<br/>
 <li>
 <i><u>Delete a Product</u></i><br/>
 Method : DELETE<br/>
-Endpoint : {localhost}/product/3<br/>
+Endpoint : {localhost}/product/{id}<br/>
 </small>
 </li>
 </ul>
